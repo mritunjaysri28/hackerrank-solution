@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        for (int i = 0; i < n; i++) {
+            int catA = scan.nextInt();
+            int catB = scan.nextInt();
+            int mouse = scan.nextInt();
+            catA = Math.abs(catA - mouse);
+            catB = Math.abs(catB - mouse);
+            if (catA < catB) {
+                System.out.println("Cat A");
+            } else if (catB < catA) {
+                System.out.println("Cat B");
+            } else {
+                System.out.println("Mouse C");
+            }
+        }
+    }
+}

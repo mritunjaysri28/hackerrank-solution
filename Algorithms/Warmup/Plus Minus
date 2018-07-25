@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+        public static void main(String[] args) {
+            float plus=0, minus=0, zero=0;
+            Scanner in = new Scanner(System.in);
+            double n = in.nextDouble();
+            for(int arr_i=0; arr_i < n; arr_i++){
+                int arr = in.nextInt();
+                if(arr<0)
+                    minus += 1;
+                else if(arr == 0)
+                    zero += 1;
+                else
+                    plus += 1;
+            }
+            System.out.print(plus/n + "\n" + minus/n + "\n" + zero/n);
+        }
+}

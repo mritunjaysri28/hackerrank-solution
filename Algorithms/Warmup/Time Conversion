@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String time = scan.next();
+        int hr = Integer.parseInt(time.substring(0, 2));
+        if (hr >= 01 && hr <= 13) {
+            String min = time.substring(3, 5);
+            if (Integer.parseInt(min) >= 00 && Integer.parseInt(min) <= 59) {
+                String sec = time.substring(6, 8);
+                if (Integer.parseInt(sec) >= 00 && Integer.parseInt(sec) <= 59) {
+                    String ampm = time.substring(8, 10);
+                    if (ampm.equals("PM")) {
+                        if(hr == 12)
+                            System.out.print(hr + ":" + min + ":" + sec);
+                        else                         
+                            System.out.print(hr+12 + ":" + min + ":" + sec);
+                    } else {
+                        if (hr == 12)
+                            System.out.print("00" + ":" + min + ":" + sec);
+                        else if(hr < 10)
+                            System.out.print("0" + hr + ":" + min + ":" + sec);
+                        else
+                            System.out.print(hr + ":" + min + ":" + sec);                            
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner scan = new Scanner(System.in);
+        int retday = scan.nextInt();
+        int retmon = scan.nextInt();
+        int retyer = scan.nextInt();
+        int exeday = retday - scan.nextInt();
+        int exemon = retmon - scan.nextInt();
+        int exeyer = retyer - scan.nextInt();
+
+        //impose fine
+        if (exeyer == 0) {
+            if (exemon == 0 && exeday > 0) {
+                    System.out.println(15 * exeday);
+            } else if (exemon > 0) {
+                System.out.println(500 * exemon);
+            } else {
+                System.out.println(0);
+            }
+        } else if (exeyer > 0) {
+            System.out.println(10000);
+        } else {
+            System.out.println(0);
+        }
+    }
+}

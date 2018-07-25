@@ -1,0 +1,54 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    
+    private void calPickFruit(int hfirst, int hend, int plant, int n, int[] fruit) {
+        int count = 0;
+        // calculate fruit
+        for (int i = 0; i < n; i++) {
+            fruit[i] = plant + fruit[i];
+            count = (fruit[i] >= hfirst && fruit[i] <= hend) ? count + 1 : count;
+        }
+        System.out.println(count);
+    }
+
+    public static void main(String[] args) {
+       
+        Scanner scan = new Scanner(System.in);
+
+        //house points
+        int s = scan.nextInt();
+        int t = scan.nextInt();
+
+        //tree plant
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+
+        //no of apples and fruits
+        int m = scan.nextInt();
+        int n = scan.nextInt();
+
+        //intialize fruits array
+        int[] apple = new int[m];
+        int[] orange = new int[n];
+
+        //apples fall point
+        for (int i = 0; i < m; i++) {
+            apple[i] = scan.nextInt();
+        }
+
+
+        //oranges fall point
+        for (int i = 0; i < n; i++) {
+            orange[i] = scan.nextInt();
+        }
+
+        Solution fruit = new Solution();
+        fruit.calPickFruit(s, t, a, m, apple);
+        fruit.calPickFruit(s, t, b, n, orange);
+    }
+}

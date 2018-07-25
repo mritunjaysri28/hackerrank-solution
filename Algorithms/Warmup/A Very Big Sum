@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       long sum = 0, arr;
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        if (1 <= n && n <= 10) {
+            for (int i = 0; i < n; i++) {
+                arr = scan.nextLong();
+                if (0 <= arr && arr <= 10000000000L)
+                    sum = sum + arr;
+            }
+        }
+        System.out.print(sum);
+    }
+}

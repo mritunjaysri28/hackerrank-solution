@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        for(int a0 = 0; a0 < n; a0++){
+            int grade = in.nextInt();
+            if (grade >= 38) {
+                int check = grade/5;
+                int res = ((check+1)*5)-grade;
+                if( res < 3 ) {
+                    System.out.println((check+1)*5);
+                }
+                else {
+                    System.out.println(grade);
+                }
+            }
+            else
+                System.out.println(grade);
+            // your code goes here
+        }
+    }
+}

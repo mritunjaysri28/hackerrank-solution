@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        //declare variables and classes
+        Scanner scan = new Scanner(System.in);
+        int count = 0;
+        
+        //input form user
+        int n = scan.nextInt();
+        int[] arr = new int[n];        
+        for ( int i = 0; i < n; i++ ) {
+            arr[i] = scan.nextInt();
+        }
+        
+        //create subset
+        for ( int  i = 0; i < n; i++ ) {
+            int sum = 0;
+            for ( int j = i; j < n; j++ ) {
+                sum = sum + arr[j];
+                //increment in count
+                count = sum < 0 ? count+1 : count;
+            }
+        }
+        
+        //print count
+        System.out.print(count);
+    }
+}

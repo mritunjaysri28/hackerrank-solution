@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+      public static void main(String[] args) {
+        int count = 0, largest = 0;
+        Scanner scan = new Scanner(System.in);
+        int m = scan.nextInt();
+        scan.close();
+        long n = Long.parseLong(Integer.toBinaryString(m));
+        while (n!=0) {
+            long reminder =  (n%10);
+            if (reminder==1) {
+                count += 1;
+            } else {
+                count = 0;
+            }
+            if(count>largest) {
+                largest = count;
+            }
+            n/=10;
+        }
+        System.out.print(largest);
+    }
+}

@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int x1 = in.nextInt();
+        int v1 = in.nextInt();
+        int x2 = in.nextInt();
+        int v2 = in.nextInt();
+        boolean meet;
+
+        //if x1 == x2 and v1 == v2 => YES
+        //if x1 < x2 and v1 == v2 : vice versa => NO
+        //if x1 < x2 and v1 < v2 => NO
+        if ( x1 == x2 ) {
+            meet = true;
+        } else if ( x1 < x2 ) {
+            meet = jump(x1, v1, x2, v2);
+        } else {
+            meet = jump(x2, v2, x1, v1);
+        }
+
+        if ( meet == true ) System.out.print("YES");
+        else System.out.print("NO");
+    }
+
+    static boolean jump(int x1, int v1, int x2, int v2) {
+        while (x2 > x1) {
+            x2 += v2;
+            x1 += v1;
+            if ( x2 == x1 )
+                return true;
+        }
+        return false;
+    }
+}

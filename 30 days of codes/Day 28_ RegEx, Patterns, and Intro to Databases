@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+import java.util.Collections;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main (String[] args) {
+        Scanner scan =new Scanner(System.in);
+        int n = scan.nextInt();
+        ArrayList<String> list = new ArrayList<>();
+        for (int i =0; i < n; i++) {
+            String name = scan.next();
+            String email = scan.next();
+            if (name.length() < 20 && email.length() < 50) {
+                Pattern name_pattern = Pattern.compile("[a-z]");
+                Matcher name_match = name_pattern.matcher(name);
+
+                Pattern email_pattern = Pattern.compile("[a-z]+@gmail\\.com$");
+                Matcher email_match = email_pattern.matcher(email);
+
+                if (name_match.find() && email_match.find()) {
+                    list.add(name);
+                }
+            }
+        }
+        Collections.sort(list);
+
+        for (String name : list) {
+            System.out.println(name);
+        }
+    }
+}

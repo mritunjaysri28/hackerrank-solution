@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class Solution {
+    static boolean isAnagram(String a, String b) {
+        
+        if ( a.equalsIgnoreCase(b) ) {
+            return true;
+        } else if ( a.length() == b.length() ) {
+            
+            //change string a & b to lower case
+            a = a.toLowerCase();
+            b = b.toLowerCase();
+            
+            //intialize hash table 
+            Hashtable<Character, Integer> hash = new Hashtable<Character, Integer>();
+            
+            //pick one character from string a and place it in hash table
+            for ( int i = 0; i < a.length(); i++) {
+                
+                char first = a.charAt(i);
+                //increment value if key is present else insert key
+                if ( !hash.containsKey(first) ) {
+                    hash.put( first, 1 );
+                } else {
+                    int value = hash.get(first);
+                    hash.put( first, ++value );
+                }
+            }
+            
+            //pick one character from string b and check it in hash table
+            for ( int i = 0; i < b.length(); i++) {
+                
+                char first = b.charAt(i);
+                //decrement value if key is present else return false
+                if ( !hash.containsKey(first) || ( hash.get(first) == 0) ) {
+                    return false;
+                } else {
+                    int value = hash.get(first);
+                    hash.put( first, --value );
+                }
+            }
+            
+        } else {
+            return false;
+        }
+        
+        return true;
+    }
+        public static void main(String[] args) {
+    
+        Scanner scan = new Scanner(System.in);
+        String a = scan.next();
+        String b = scan.next();
+        scan.close();
+        boolean ret = isAnagram(a, b);
+        System.out.println( (ret) ? "Anagrams" : "Not Anagrams" );
+    }
+}

@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    
+    int Alice=0,Bob=0;
+    
+   public void cmp(int a, int b){
+        if(a>b)
+            this.Alice =  this.Alice + 1;
+        if(a<b)
+            this.Bob = this.Bob + 1;
+    }
+    
+    void print(){
+        System.out.print(this.Alice + " " + this.Bob);
+    }
+
+    public static void main(String[] args) {
+        int Alice=0, Bob=0;
+        Scanner in = new Scanner(System.in);
+        int a0 = in.nextInt();
+        int a1 = in.nextInt();
+        int a2 = in.nextInt();
+        int b0 = in.nextInt();
+        int b1 = in.nextInt();
+        int b2 = in.nextInt();
+        Solution sol = new Solution();
+        if (1<=a0 && a0<=100 && 1<=b0 && b0<=100)
+            sol.cmp(a0, b0);
+        if (1<=a1 && a1<=100 && 1<=b1 && b1<=100)
+            sol.cmp(a1, b1);
+        if (1<=a2 && a2<=100 && 1<=b2 && b2<=100)
+            sol.cmp(a2, b2);
+        sol.print();
+    }
+}

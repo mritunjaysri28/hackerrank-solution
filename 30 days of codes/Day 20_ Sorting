@@ -1,0 +1,49 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+     int count = 0;
+     public static void main(String args[]) {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int[] array = new int[n];
+        for (int i = 0; i < n; i++) {
+            array[i] = scan.nextInt();
+        }
+
+        //Create object
+        Solution sorting_binarySort = new Solution();
+
+        //binary sort
+        array = sorting_binarySort.binarySort(array, n);
+
+        //print sorting details
+        sorting_binarySort.printDetails(array[0], array[n-1]);
+    }
+    
+    //perform printing sorting Details
+    private void printDetails(int first, int last) {
+        System.out.println("Array is sorted in " + this.count + " swaps.");
+        System.out.println("First Element: " + first);
+        System.out.println("Last Element: " + last);
+    }
+
+    //perform binary sort
+    private int[] binarySort(int[] array, int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = i+1; j < n; j++) {
+                if (array[i] > array[j]) {
+
+                    //swap perform
+                    int temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                    
+                    //no of swap count
+                    this.count += 1;
+                }
+            }
+        }
+        return array;
+    }
+}
