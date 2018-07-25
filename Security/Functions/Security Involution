@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int[] arr = new int[n+1];
+        int count = 0;
+        for (int i = 1; i <= n; i++) {
+            arr[i] = scan.nextInt();
+        }
+        for (int i = 1; i <= n; i++) {
+            if (i == arr[arr[i]])
+                count += 1;
+            else
+                break;
+        }
+        if (count == 0)
+            System.out.print("NO");
+        else
+            System.out.print("YES");
+    }
+}

@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String str = scan.next();
+        int n = scan.nextInt();
+        String code = "";
+        for (char s : str.toCharArray()) {              
+           code = code.concat(Integer.toString(( Character.getNumericValue(s) + n ) % 10));
+        }
+        System.out.println(code);
+    }
+}

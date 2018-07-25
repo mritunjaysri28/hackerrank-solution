@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.*;
+import java.math.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        BigInteger code = BigInteger.valueOf(1);
+        for (int i = n; i > 1; i--) {
+            code = code.multiply(BigInteger.valueOf(i));
+        }
+        System.out.print(code);
+    }
+}
