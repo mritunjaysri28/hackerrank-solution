@@ -1,7 +1,11 @@
-# hackerrank.com
-
 # Profile (mriunjaysri28) 
 https://www.hackerrank.com/mritunjaysri28
+
+Certification | Level
+----------------|------
+SQL | Basic and Intermediate
+JAVA | Basic
+
 
 Skils | Badge | Stars
 --------|-------|------
@@ -11,12 +15,3 @@ Python | Bronza | 2
 Problem Solving | Silver | 3
 10 Days of Java Script | Gold | 5
 30 Days of Code | Gold | 5
-
-Certification | Level
-----------------|------
-SQL | Basic and Intermediate
-JAVA | Basic
-
-
-
-
