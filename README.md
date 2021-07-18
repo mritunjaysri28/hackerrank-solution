@@ -3,7 +3,7 @@
 # Profile (mriunjaysri28) 
 https://www.hackerrank.com/mritunjaysri28
 
-# Skils | Badge | Stars
+Skils | Badge | Stars
 --------|-------|------
 SQL | Gold | 5
 JAVA | Gold | 5
@@ -12,7 +12,7 @@ Problem Solving | Silver | 3
 10 Days of Java Script | Gold | 5
 30 Days of Code | Gold | 5
 
-# Certification | Level
+Certification | Level
 ----------------|------
 SQL | Basic and Intermediate
 JAVA | Basic
