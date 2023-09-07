@@ -3,15 +3,18 @@ https://www.hackerrank.com/mritunjaysri28
 
 Certification | Level
 ----------------|------
-SQL | Basic and Intermediate
+SQL | Basic
+SQL | Intermediate
+Python | Basic
 JAVA | Basic
+Go | Basic
 
 
 Skils | Badge | Stars
 --------|-------|------
 SQL | Gold | 5
-JAVA | Gold | 5
-Python | Bronze | 2
+Java | Gold | 5
+30-Days-Of-Code | Gold | 5
+10-Days-Of-Javascript | 5
+Python | Silver | 3
 Problem Solving | Silver | 3
-10 Days of Java Script | Gold | 5
-30 Days of Code | Gold | 5
